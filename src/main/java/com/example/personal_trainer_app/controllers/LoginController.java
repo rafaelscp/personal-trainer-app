@@ -1,4 +1,4 @@
-package com.example.personal_trainer_app.controller;
+package com.example.personal_trainer_app.controllers;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -11,7 +11,7 @@ public class LoginController {
 
     @GetMapping
     public ResponseEntity getUser() {
-        return ResponseEntity.ok("n deu ok");
+        return ResponseEntity.ok("deu ok");
     }
 
 }
