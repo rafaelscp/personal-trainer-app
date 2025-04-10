@@ -1,5 +1,7 @@
 package com.example.personal_trainer_app.controller;
 
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -7,8 +9,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/login")
 public class LoginController {
 
-    public String Hello() {
-        return "Hello, this is the login controller!";
+    @GetMapping
+    public ResponseEntity getUser() {
+        return ResponseEntity.ok("n deu ok");
     }
 
 }
