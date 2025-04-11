@@ -71,45 +71,32 @@
 	</dependencies>
 
 	<build>
-	<plugins>
-		<plugin>
-			<groupId>org.apache.maven.plugins</groupId>
-			<artifactId>maven-compiler-plugin</artifactId>
-			<configuration>
-				<annotationProcessorPaths>
-					<path>
-						<groupId>org.projectlombok</groupId>
-						<artifactId>lombok</artifactId>
-					</path>
-				</annotationProcessorPaths>
-			</configuration>
-		</plugin>
-		<plugin>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-maven-plugin</artifactId>
-			<configuration>
-				<excludes>
-					<exclude>
-						<groupId>org.projectlombok</groupId>
-						<artifactId>lombok</artifactId>
-					</exclude>
-				</excludes>
-			</configuration>
-		</plugin>
-
-		<!-- 👇 Plugin do Flyway com configs -->
-		<plugin>
-			<groupId>org.flywaydb</groupId>
-			<artifactId>flyway-maven-plugin</artifactId>
-			<version>10.20.1</version><!--$NO-MVN-MAN-VER$-->
-			<configuration>
-				<url>jdbc:postgresql://localhost:5432/users</url>
-				<user>postgres</user>
-				<password>31145302</password>
-			</configuration>
-		</plugin>
-	</plugins>
-</build>
-
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<annotationProcessorPaths>
+						<path>
+							<groupId>org.projectlombok</groupId>
+							<artifactId>lombok</artifactId>
+						</path>
+					</annotationProcessorPaths>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<excludes>
+						<exclude>
+							<groupId>org.projectlombok</groupId>
+							<artifactId>lombok</artifactId>
+						</exclude>
+					</excludes>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
 
 </project>
